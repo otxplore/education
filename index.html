@@ -1,0 +1,1772 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#101820">
+
+<title>OTXS Education | Learn. Build. Grow.</title>
+
+<meta name="description" content="Explore professional technical training, programming, Generative AI, data analytics and institutional education programmes with OTXS Education.">
+
+<link rel="canonical" href="https://education.otxs.de/">
+
+<style>
+:root {
+  --navy: #101820;
+  --navy2: #192630;
+  --navy3: #22333f;
+  --yellow: #ffd166;
+  --orange: #ff7a35;
+  --white: #fffaf0;
+  --muted: #bdc8d0;
+  --border: rgba(255,255,255,.12);
+  --card: #1a2731;
+  --green: #65d6a0;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: var(--navy);
+  color: var(--white);
+  line-height: 1.6;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button, input, select, textarea {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+.container {
+  width: min(1150px, 91%);
+  margin: auto;
+}
+
+.section {
+  padding: 85px 0;
+}
+
+.section-dark {
+  background: var(--navy2);
+}
+
+.eyebrow {
+  color: var(--yellow);
+  font-size: .8rem;
+  font-weight: 800;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 13px;
+}
+
+.section-heading {
+  max-width: 720px;
+  margin-bottom: 38px;
+}
+
+.section-heading h2 {
+  font-size: clamp(2rem, 4vw, 3.1rem);
+  line-height: 1.15;
+  margin-bottom: 15px;
+}
+
+.section-heading p {
+  color: var(--muted);
+}
+
+.accent {
+  color: var(--yellow);
+}
+
+/* NAVIGATION */
+
+header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(16,24,32,.97);
+  border-bottom: 1px solid var(--border);
+  backdrop-filter: blur(12px);
+}
+
+.nav {
+  min-height: 76px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 25px;
+}
+
+.logo {
+  font-size: 1.45rem;
+  font-weight: 900;
+  white-space: nowrap;
+}
+
+.logo .brand {
+  color: var(--yellow);
+}
+
+.logo small {
+  font-size: .8rem;
+  font-weight: 500;
+  color: var(--muted);
+  display: block;
+  letter-spacing: 1px;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 23px;
+  font-size: .92rem;
+}
+
+.nav-links a:hover {
+  color: var(--yellow);
+}
+
+.nav-links .nav-cta {
+  background: var(--yellow);
+  color: var(--navy);
+  padding: 10px 17px;
+  border-radius: 7px;
+  font-weight: 800;
+}
+
+.menu-toggle {
+  display: none;
+  background: transparent;
+  border: 1px solid var(--border);
+  color: white;
+  padding: 8px 12px;
+  border-radius: 7px;
+}
+
+/* BUTTONS */
+
+.btn {
+  display: inline-block;
+  border: 1px solid transparent;
+  background: var(--yellow);
+  color: var(--navy);
+  border-radius: 8px;
+  padding: 13px 20px;
+  font-weight: 800;
+  transition: .2s;
+}
+
+.btn:hover {
+  background: #ffe09a;
+  transform: translateY(-2px);
+}
+
+.btn-outline {
+  background: transparent;
+  color: var(--yellow);
+  border-color: var(--yellow);
+}
+
+.btn-outline:hover {
+  background: var(--yellow);
+  color: var(--navy);
+}
+
+.btn-small {
+  padding: 9px 14px;
+  font-size: .88rem;
+}
+
+/* HERO */
+
+.hero {
+  min-height: 590px;
+  display: flex;
+  align-items: center;
+  background:
+    linear-gradient(90deg, rgba(16,24,32,.98), rgba(16,24,32,.76)),
+    url("https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=1900&q=85")
+    center/cover;
+}
+
+.hero-content {
+  max-width: 750px;
+  padding: 90px 0;
+}
+
+.hero h1 {
+  font-size: clamp(2.8rem, 6vw, 5rem);
+  line-height: 1.06;
+  letter-spacing: -2px;
+  margin-bottom: 25px;
+}
+
+.hero h1 span {
+  color: var(--yellow);
+}
+
+.hero p {
+  color: var(--muted);
+  font-size: 1.12rem;
+  max-width: 650px;
+  margin-bottom: 30px;
+}
+
+.hero-actions {
+  display: flex;
+  gap: 13px;
+  flex-wrap: wrap;
+}
+
+.hero-note {
+  margin-top: 35px;
+  color: var(--muted);
+  font-size: .88rem;
+}
+
+/* HIGHLIGHTS */
+
+.highlights {
+  background: var(--yellow);
+  color: var(--navy);
+  padding: 22px 0;
+}
+
+.highlight-grid {
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  gap: 20px;
+  text-align: center;
+}
+
+.highlight strong {
+  display: block;
+  font-size: 1.05rem;
+}
+
+.highlight span {
+  font-size: .83rem;
+}
+
+/* COURSE CATEGORIES */
+
+.category-grid {
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  gap: 19px;
+}
+
+.category-card {
+  background: var(--card);
+  padding: 25px;
+  border: 1px solid var(--border);
+  border-radius: 13px;
+  transition: .2s;
+}
+
+.category-card:hover {
+  transform: translateY(-5px);
+  border-color: var(--yellow);
+}
+
+.category-icon {
+  font-size: 2rem;
+  margin-bottom: 15px;
+}
+
+.category-card h3 {
+  margin-bottom: 9px;
+}
+
+.category-card p {
+  color: var(--muted);
+  font-size: .9rem;
+}
+
+/* COURSE CATALOGUE */
+
+.catalogue-controls {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-bottom: 28px;
+}
+
+.search-box {
+  flex: 1;
+  min-width: 220px;
+}
+
+.search-box input,
+.catalogue-controls select {
+  width: 100%;
+  padding: 13px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: var(--navy);
+  color: white;
+}
+
+.catalogue-controls select {
+  max-width: 230px;
+}
+
+.course-grid {
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 22px;
+}
+
+.course-card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: .2s;
+}
+
+.course-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(255,209,102,.6);
+}
+
+.course-image {
+  height: 180px;
+  background: var(--navy3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 3.5rem;
+}
+
+.course-body {
+  padding: 23px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.course-tag {
+  color: var(--yellow);
+  font-size: .75rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 800;
+  margin-bottom: 9px;
+}
+
+.course-body h3 {
+  margin-bottom: 10px;
+  font-size: 1.2rem;
+}
+
+.course-body p {
+  color: var(--muted);
+  font-size: .92rem;
+  margin-bottom: 15px;
+}
+
+.course-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 13px;
+  color: var(--muted);
+  font-size: .83rem;
+  margin-bottom: 18px;
+}
+
+.course-actions {
+  margin-top: auto;
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.course-actions button {
+  flex: 1;
+}
+
+.empty-state {
+  display: none;
+  text-align: center;
+  color: var(--muted);
+  padding: 35px;
+  background: var(--card);
+  border-radius: 10px;
+}
+
+/* LEARNING MODEL */
+
+.learning-grid {
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 22px;
+}
+
+.learning-card {
+  padding: 27px;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 13px;
+}
+
+.learning-card .number {
+  color: var(--orange);
+  font-weight: 900;
+  font-size: 1.3rem;
+  margin-bottom: 12px;
+}
+
+.learning-card h3 {
+  margin-bottom: 10px;
+}
+
+.learning-card p {
+  color: var(--muted);
+  font-size: .94rem;
+}
+
+/* INSTITUTIONAL */
+
+.institutional {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 45px;
+  align-items: center;
+}
+
+.institutional h2 {
+  font-size: clamp(2rem,4vw,3rem);
+  line-height: 1.15;
+  margin-bottom: 20px;
+}
+
+.institutional p {
+  color: var(--muted);
+  margin-bottom: 20px;
+}
+
+.institutional-list {
+  list-style: none;
+  margin-bottom: 25px;
+}
+
+.institutional-list li {
+  margin: 12px 0;
+}
+
+.institutional-list li::before {
+  content: "✓";
+  color: var(--yellow);
+  font-weight: 900;
+  margin-right: 10px;
+}
+
+.institutional-visual {
+  min-height: 330px;
+  border-radius: 17px;
+  background:
+    linear-gradient(135deg, rgba(255,122,53,.25), rgba(255,209,102,.12)),
+    url("https://images.unsplash.com/photo-1524178232363-1fb2b075b655?auto=format&fit=crop&w=1100&q=85")
+    center/cover;
+}
+
+/* OPENED LABS */
+
+.openedlabs {
+  border: 1px solid var(--border);
+  background: linear-gradient(130deg,#202f39,#17232c);
+  border-radius: 16px;
+  padding: 38px;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+  gap: 30px;
+}
+
+.openedlabs h2 {
+  font-size: 2rem;
+  margin-bottom: 12px;
+}
+
+.openedlabs p {
+  color: var(--muted);
+  max-width: 650px;
+}
+
+/* ENQUIRY */
+
+.enquiry-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 35px;
+  align-items: start;
+}
+
+.enquiry-info p {
+  color: var(--muted);
+  margin-bottom: 20px;
+}
+
+.contact-line {
+  margin-top: 17px;
+  color: var(--yellow);
+}
+
+.form-card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 15px;
+  padding: 27px;
+}
+
+.form-card h3 {
+  margin-bottom: 20px;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  font-size: .87rem;
+  margin-bottom: 7px;
+  color: var(--muted);
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  background: var(--navy);
+  color: white;
+  border: 1px solid var(--border);
+  border-radius: 7px;
+  padding: 12px;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  outline: 2px solid var(--yellow);
+}
+
+.form-status {
+  color: var(--yellow);
+  font-size: .88rem;
+  margin-top: 12px;
+  min-height: 22px;
+}
+
+/* FAQ */
+
+.faq-list {
+  max-width: 850px;
+}
+
+.faq-item {
+  border-bottom: 1px solid var(--border);
+}
+
+.faq-question {
+  width: 100%;
+  padding: 20px 0;
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+  text-align: left;
+  background: transparent;
+  color: white;
+  border: 0;
+  font-weight: 700;
+  font-size: 1rem;
+}
+
+.faq-answer {
+  display: none;
+  color: var(--muted);
+  padding: 0 0 20px;
+  font-size: .94rem;
+}
+
+.faq-item.active .faq-answer {
+  display: block;
+}
+
+.faq-item.active .faq-icon {
+  color: var(--yellow);
+}
+
+/* FOOTER */
+
+footer {
+  background: #0b1117;
+  padding: 45px 0 20px;
+  border-top: 1px solid var(--border);
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1fr 1fr;
+  gap: 30px;
+  margin-bottom: 35px;
+}
+
+.footer-column h3 {
+  color: var(--yellow);
+  font-size: 1rem;
+  margin-bottom: 15px;
+}
+
+.footer-column p,
+.footer-column a {
+  display: block;
+  color: var(--muted);
+  font-size: .88rem;
+  margin-bottom: 9px;
+}
+
+.footer-column a:hover {
+  color: var(--yellow);
+}
+
+.footer-bottom {
+  padding-top: 20px;
+  border-top: 1px solid var(--border);
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+  flex-wrap: wrap;
+  color: var(--muted);
+  font-size: .82rem;
+}
+
+/* MODAL */
+
+.modal {
+  display: none;
+  position: fixed;
+  inset: 0;
+  z-index: 200;
+  background: rgba(0,0,0,.78);
+  padding: 20px;
+  overflow-y: auto;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal.active {
+  display: flex;
+}
+
+.modal-content {
+  width: min(550px,100%);
+  background: var(--navy2);
+  border: 1px solid var(--border);
+  border-radius: 15px;
+  padding: 30px;
+  position: relative;
+  max-height: 90vh;
+  overflow-y: auto;
+}
+
+.modal-close {
+  position: absolute;
+  top: 12px;
+  right: 15px;
+  border: 0;
+  background: transparent;
+  color: white;
+  font-size: 1.8rem;
+}
+
+.modal-content h2 {
+  margin-bottom: 13px;
+}
+
+.modal-content p {
+  color: var(--muted);
+  margin-bottom: 15px;
+}
+
+.modal-details {
+  padding: 15px;
+  background: var(--card);
+  border-radius: 8px;
+  margin-bottom: 20px;
+  color: var(--muted);
+}
+
+/* RESPONSIVE */
+
+@media(max-width:900px) {
+  .category-grid {
+    grid-template-columns: repeat(2,1fr);
+  }
+
+  .course-grid {
+    grid-template-columns: repeat(2,1fr);
+  }
+
+  .footer-grid {
+    grid-template-columns: repeat(2,1fr);
+  }
+
+  .institutional {
+    gap: 25px;
+  }
+}
+
+@media(max-width:700px) {
+  .nav {
+    flex-wrap: wrap;
+    padding: 14px 0;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav-links {
+    display: none;
+    width: 100%;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+    padding: 10px 0;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .nav-links a {
+    padding: 12px 5px;
+  }
+
+  .nav-links .nav-cta {
+    text-align: center;
+  }
+
+  .highlight-grid {
+    grid-template-columns: repeat(2,1fr);
+  }
+
+  .course-grid,
+  .learning-grid,
+  .institutional,
+  .enquiry-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .openedlabs {
+    grid-template-columns: 1fr;
+  }
+
+  .institutional-visual {
+    min-height: 250px;
+  }
+
+  .section {
+    padding: 65px 0;
+  }
+}
+
+@media(max-width:450px) {
+  .category-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+
+  .hero h1 {
+    letter-spacing: -1px;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <div class="container nav">
+
+    <a href="#" class="logo">
+      <span class="brand">OTXS</span> Education
+      <small>LEARN · BUILD · GROW</small>
+    </a>
+
+    <button class="menu-toggle" id="menuToggle"
+      aria-label="Toggle navigation"
+      aria-expanded="false">
+      ☰
+    </button>
+
+    <nav class="nav-links" id="navLinks">
+      <a href="#programs">Programs</a>
+      <a href="#courses">Courses</a>
+      <a href="#learning">Our Approach</a>
+      <a href="#institutions">Institutions</a>
+      <a href="#about">About</a>
+      <a href="#contact" class="nav-cta">Get Started</a>
+    </nav>
+
+  </div>
+</header>
+
+<main>
+
+<!-- HERO -->
+
+<section class="hero">
+  <div class="container">
+    <div class="hero-content">
+
+      <div class="eyebrow">OTXS Education · Professional Learning</div>
+
+      <h1>
+        Learn new skills.<br>
+        <span>Build real solutions.</span>
+      </h1>
+
+      <p>
+        Explore technology, programming, Generative AI and professional
+        development through practical learning, guided training and
+        project-based experiences.
+      </p>
+
+      <div class="hero-actions">
+        <a href="#courses" class="btn">Explore Programs</a>
+        <a href="#contact" class="btn btn-outline">Enquire Now</a>
+      </div>
+
+      <div class="hero-note">
+        Learn at your pace. Build practical skills. Keep growing.
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- HIGHLIGHTS -->
+
+<div class="highlights">
+  <div class="container highlight-grid">
+
+    <div class="highlight">
+      <strong>Practical Learning</strong>
+      <span>Learn by doing</span>
+    </div>
+
+    <div class="highlight">
+      <strong>Industry Skills</strong>
+      <span>Relevant technologies</span>
+    </div>
+
+    <div class="highlight">
+      <strong>Flexible Programs</strong>
+      <span>Different learning formats</span>
+    </div>
+
+    <div class="highlight">
+      <strong>Project Based</strong>
+      <span>Build and demonstrate</span>
+    </div>
+
+  </div>
+</div>
+
+<!-- PROGRAM AREAS -->
+
+<section class="section" id="programs">
+  <div class="container">
+
+    <div class="section-heading">
+      <div class="eyebrow">Explore learning areas</div>
+      <h2>Skills for the <span class="accent">digital world.</span></h2>
+      <p>
+        Explore different technical domains and choose a learning
+        path that matches your interests and professional goals.
+      </p>
+    </div>
+
+    <div class="category-grid">
+
+      <article class="category-card">
+        <div class="category-icon">💻</div>
+        <h3>Software Engineering</h3>
+        <p>
+          Programming, web development, software testing,
+          databases and application development.
+        </p>
+      </article>
+
+      <article class="category-card">
+        <div class="category-icon">🤖</div>
+        <h3>Generative AI</h3>
+        <p>
+          LLMs, prompt engineering, AI APIs, automation
+          and practical AI application development.
+        </p>
+      </article>
+
+      <article class="category-card">
+        <div class="category-icon">📊</div>
+        <h3>Data Analytics</h3>
+        <p>
+          Python, data processing, visualisation,
+          spreadsheets and analytical thinking.
+        </p>
+      </article>
+
+      <article class="category-card">
+        <div class="category-icon">⚙️</div>
+        <h3>Automation & DevOps</h3>
+        <p>
+          Linux, scripting, CI/CD concepts, testing,
+          deployment and workflow automation.
+        </p>
+      </article>
+
+    </div>
+
+  </div>
+</section>
+
+<!-- COURSE CATALOGUE -->
+
+<section class="section section-dark" id="courses">
+  <div class="container">
+
+    <div class="section-heading">
+      <div class="eyebrow">Course catalogue</div>
+      <h2>Find your next <span class="accent">learning path.</span></h2>
+      <p>
+        Browse our sample program catalogue. Contact us for
+        current batches, availability, fees and programme details.
+      </p>
+    </div>
+
+    <div class="catalogue-controls">
+
+      <div class="search-box">
+        <input type="search" id="courseSearch"
+          placeholder="Search courses, skills or technologies..."
+          aria-label="Search courses">
+      </div>
+
+      <select id="categoryFilter" aria-label="Filter by category">
+        <option value="all">All categories</option>
+        <option value="programming">Programming</option>
+        <option value="ai">Generative AI</option>
+        <option value="analytics">Data Analytics</option>
+        <option value="automation">Automation & DevOps</option>
+        <option value="testing">Software Testing</option>
+      </select>
+
+    </div>
+
+    <div class="course-grid" id="courseGrid">
+
+      <article class="course-card" data-category="programming"
+        data-search="python programming coding software development">
+        <div class="course-image">🐍</div>
+        <div class="course-body">
+          <div class="course-tag">Programming</div>
+          <h3>Python Programming</h3>
+          <p>
+            Learn programming fundamentals, data structures,
+            scripting and practical Python applications.
+          </p>
+          <div class="course-meta">
+            <span>◷ Flexible duration</span>
+            <span>● Beginner to Advanced</span>
+          </div>
+          <div class="course-actions">
+            <button class="btn btn-small"
+              onclick="showCourse('Python Programming')">Details</button>
+            <button class="btn btn-outline btn-small"
+              onclick="enrolCourse('Python Programming')">Enquire</button>
+          </div>
+        </div>
+      </article>
+
+      <article class="course-card" data-category="ai"
+        data-search="generative ai artificial intelligence llm prompt engineering">
+        <div class="course-image">🤖</div>
+        <div class="course-body">
+          <div class="course-tag">Artificial Intelligence</div>
+          <h3>Applied Generative AI</h3>
+          <p>
+            Explore LLMs, tokens, prompt engineering, APIs,
+            AI tools and practical applications.
+          </p>
+          <div class="course-meta">
+            <span>◷ 1–2 months (indicative)</span>
+            <span>● Intermediate to Advanced</span>
+          </div>
+          <div class="course-actions">
+            <button class="btn btn-small"
+              onclick="showCourse('Applied Generative AI')">Details</button>
+            <button class="btn btn-outline btn-small"
+              onclick="enrolCourse('Applied Generative AI')">Enquire</button>
+          </div>
+        </div>
+      </article>
+
+      <article class="course-card" data-category="analytics"
+        data-search="data analytics python visualization research">
+        <div class="course-image">📊</div>
+        <div class="course-body">
+          <div class="course-tag">Data Analytics</div>
+          <h3>Python for Data Analytics</h3>
+          <p>
+            Understand data handling, analysis, visualisation
+            and practical research workflows.
+          </p>
+          <div class="course-meta">
+            <span>◷ Flexible duration</span>
+            <span>● Beginner to Intermediate</span>
+          </div>
+          <div class="course-actions">
+            <button class="btn btn-small"
+              onclick="showCourse('Python for Data Analytics')">Details</button>
+            <button class="btn btn-outline btn-small"
+              onclick="enrolCourse('Python for Data Analytics')">Enquire</button>
+          </div>
+        </div>
+      </article>
+
+      <article class="course-card" data-category="testing"
+        data-search="software testing qa manual automation api testing">
+        <div class="course-image">🧪</div>
+        <div class="course-body">
+          <div class="course-tag">Quality Engineering</div>
+          <h3>Software Testing & QA</h3>
+          <p>
+            Learn test planning, test cases, manual testing,
+            API testing and automation concepts.
+          </p>
+          <div class="course-meta">
+            <span>◷ Flexible duration</span>
+            <span>● Beginner to Advanced</span>
+          </div>
+          <div class="course-actions">
+            <button class="btn btn-small"
+              onclick="showCourse('Software Testing and QA')">Details</button>
+            <button class="btn btn-outline btn-small"
+              onclick="enrolCourse('Software Testing and QA')">Enquire</button>
+          </div>
+        </div>
+      </article>
+
+      <article class="course-card" data-category="automation"
+        data-search="linux shell scripting automation devops">
+        <div class="course-image">⚙️</div>
+        <div class="course-body">
+          <div class="course-tag">Automation</div>
+          <h3>Linux & Automation</h3>
+          <p>
+            Work with Linux environments, shell scripting,
+            automation and deployment fundamentals.
+          </p>
+          <div class="course-meta">
+            <span>◷ Flexible duration</span>
+            <span>● Beginner to Intermediate</span>
+          </div>
+          <div class="course-actions">
+            <button class="btn btn-small"
+              onclick="showCourse('Linux and Automation')">Details</button>
+            <button class="btn btn-outline btn-small"
+              onclick="enrolCourse('Linux and Automation')">Enquire</button>
+          </div>
+        </div>
+      </article>
+
+      <article class="course-card" data-category="programming"
+        data-search="web development html css javascript frontend">
+        <div class="course-image">🌐</div>
+        <div class="course-body">
+          <div class="course-tag">Web Development</div>
+          <h3>Web Development Fundamentals</h3>
+          <p>
+            Build responsive websites using HTML, CSS,
+            JavaScript and practical frontend techniques.
+          </p>
+          <div class="course-meta">
+            <span>◷ Flexible duration</span>
+            <span>● Beginner</span>
+          </div>
+          <div class="course-actions">
+            <button class="btn btn-small"
+              onclick="showCourse('Web Development Fundamentals')">Details</button>
+            <button class="btn btn-outline btn-small"
+              onclick="enrolCourse('Web Development Fundamentals')">Enquire</button>
+          </div>
+        </div>
+      </article>
+
+    </div>
+
+    <div class="empty-state" id="emptyState">
+      No matching courses found. Try another search or category.
+    </div>
+
+  </div>
+</section>
+
+<!-- LEARNING APPROACH -->
+
+<section class="section" id="learning">
+  <div class="container">
+
+    <div class="section-heading">
+      <div class="eyebrow">Our approach</div>
+      <h2>Learning that moves <span class="accent">beyond theory.</span></h2>
+      <p>
+        We focus on understanding concepts, applying knowledge
+        and developing the confidence to build practical solutions.
+      </p>
+    </div>
+
+    <div class="learning-grid">
+
+      <article class="learning-card">
+        <div class="number">01</div>
+        <h3>Understand</h3>
+        <p>
+          Develop a strong foundation through structured lessons,
+          explanations and guided learning.
+        </p>
+      </article>
+
+      <article class="learning-card">
+        <div class="number">02</div>
+        <h3>Practise</h3>
+        <p>
+          Apply concepts through coding exercises, assignments,
+          experiments and practical tasks.
+        </p>
+      </article>
+
+      <article class="learning-card">
+        <div class="number">03</div>
+        <h3>Build</h3>
+        <p>
+          Work on projects that demonstrate your understanding
+          and help develop a practical portfolio.
+        </p>
+      </article>
+
+    </div>
+
+  </div>
+</section>
+
+<!-- INSTITUTIONAL TRAINING -->
+
+<section class="section section-dark" id="institutions">
+  <div class="container">
+
+    <div class="institutional">
+
+      <div>
+        <div class="eyebrow">Institutional & corporate programmes</div>
+
+        <h2>Bring practical technology education to your <span class="accent">organisation.</span></h2>
+
+        <p>
+          We work towards making technical education more accessible
+          through customised learning programmes for schools, colleges,
+          educators and organisations.
+        </p>
+
+        <ul class="institutional-list">
+          <li>School and college technical workshops</li>
+          <li>Programming and Generative AI sessions</li>
+          <li>Educator training and mentoring</li>
+          <li>Corporate technical learning programmes</li>
+          <li>Customised curriculum and practical assessments</li>
+        </ul>
+
+        <a href="#contact" class="btn">Discuss a Partnership</a>
+      </div>
+
+      <div class="institutional-visual" role="img"
+        aria-label="Professional training classroom"></div>
+
+    </div>
+
+  </div>
+</section>
+
+<!-- OPENED LABS -->
+
+<section class="section">
+  <div class="container">
+
+    <div class="openedlabs" id="about">
+
+      <div>
+        <div class="eyebrow">Our technical learning initiative</div>
+        <h2>Powered by <span class="accent">openEd Labs.</span></h2>
+
+        <p>
+          openEd Labs is a technical learning initiative focused on
+          programming, software engineering, data analytics and
+          Generative AI. Through practical training and guided
+          projects, the initiative aims to help learners develop
+          relevant technical skills.
+        </p>
+
+        <p style="margin-top:13px;color:var(--muted)">
+          Explore our existing learning programmes and training initiatives.
+        </p>
+      </div>
+
+      <div>
+        <a href="https://openedlabs.eduspace.work"
+          target="_blank" rel="noopener"
+          class="btn">Visit openEd Labs →</a>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<!-- ENQUIRY -->
+
+<section class="section section-dark" id="contact">
+  <div class="container">
+
+    <div class="enquiry-grid">
+
+      <div class="enquiry-info">
+
+        <div class="eyebrow">Start your learning journey</div>
+
+        <h2 style="font-size:clamp(2rem,4vw,3rem);line-height:1.15;margin-bottom:18px">
+          Let's discuss your <span class="accent">learning goals.</span>
+        </h2>
+
+        <p>
+          Interested in a course, technical training, institutional
+          programme or collaboration? Share your requirements
+          and connect with our team.
+        </p>
+
+        <div class="contact-line">
+          ✉ openedlabs@gmail.com
+        </div>
+
+        <div class="contact-line">
+          <a href="https://wa.me/919625188625"
+             target="_blank" rel="noopener">
+            WhatsApp: +91 9625188625 →
+          </a>
+        </div>
+
+        <div class="contact-line">
+          <a href="https://openedlabs.eduspace.work"
+             target="_blank" rel="noopener">
+            openEd Labs website →
+          </a>
+        </div>
+
+      </div>
+
+      <div class="form-card">
+
+        <h3>Training Enquiry</h3>
+
+        <form id="enquiryForm">
+
+          <div class="form-group">
+            <label for="fullName">Full name *</label>
+            <input type="text" id="fullName" required
+              placeholder="Enter your name">
+          </div>
+
+          <div class="form-group">
+            <label for="email">Email address *</label>
+            <input type="email" id="email" required
+              placeholder="Enter your email">
+          </div>
+
+          <div class="form-group">
+            <label for="phone">Contact number</label>
+            <input type="tel" id="phone"
+              placeholder="Enter your contact number">
+          </div>
+
+          <div class="form-group">
+            <label for="interest">Area of interest *</label>
+            <select id="interest" required>
+              <option value="">Select an area</option>
+              <option>Software Engineering</option>
+              <option>Programming</option>
+              <option>Generative AI</option>
+              <option>Data Analytics</option>
+              <option>Software Testing & QA</option>
+              <option>Linux & Automation</option>
+              <option>Institutional Training</option>
+              <option>Corporate Training</option>
+              <option>Instructor Partnership</option>
+              <option>Other</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="message">Tell us about your requirements</label>
+            <textarea id="message" rows="4"
+              placeholder="Your learning goals, preferred schedule, experience level, etc."></textarea>
+          </div>
+
+          <button type="submit" class="btn" style="width:100%">
+            Send Enquiry on WhatsApp
+          </button>
+
+          <p class="form-status" id="formStatus"
+            role="status" aria-live="polite"></p>
+
+        </form>
+
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<!-- FAQ -->
+
+<section class="section" id="faq">
+  <div class="container">
+
+    <div class="section-heading">
+      <div class="eyebrow">Frequently asked questions</div>
+      <h2>Things you might <span class="accent">want to know.</span></h2>
+    </div>
+
+    <div class="faq-list">
+
+      <div class="faq-item">
+        <button class="faq-question">
+          Do I need previous programming experience?
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer">
+          Not necessarily. Some programmes can be suitable for beginners,
+          while others require prior knowledge. Check the prerequisites
+          for the specific programme.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question">
+          Are training programmes available online?
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer">
+          Online training can be discussed for suitable programmes.
+          Offline and institutional arrangements depend on location
+          and availability.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question">
+          Do you provide certificates?
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer">
+          Certificate availability and eligibility depend on the
+          programme, assessment requirements and completion criteria.
+          Details should be confirmed before enrolment.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question">
+          Can schools and colleges collaborate with OTXS Education?
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer">
+          Yes. Institutions can contact us to discuss technical
+          workshops, educator programmes, curriculum requirements
+          and customised training.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question">
+          How do I know the current course fees?
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer">
+          Fees, schedules and batch availability may vary.
+          Submit an enquiry to receive the latest programme details.
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+</main>
+
+<!-- FOOTER -->
+
+<footer>
+  <div class="container">
+
+    <div class="footer-grid">
+
+      <div class="footer-column">
+        <div class="logo" style="margin-bottom:15px">
+          <span class="brand">OTXS</span> Education
+        </div>
+        <p>
+          Learn. Build. Grow.<br>
+          Practical learning for a changing world.
+        </p>
+      </div>
+
+      <div class="footer-column">
+        <h3>Learning</h3>
+        <a href="#programs">Learning Areas</a>
+        <a href="#courses">Courses</a>
+        <a href="#learning">Our Approach</a>
+        <a href="#faq">FAQs</a>
+      </div>
+
+      <div class="footer-column">
+        <h3>Partnerships</h3>
+        <a href="#institutions">Schools & Colleges</a>
+        <a href="#institutions">Corporate Training</a>
+        <a href="#contact">Instructor Enquiry</a>
+        <a href="#contact">Collaborations</a>
+      </div>
+
+      <div class="footer-column">
+        <h3>OTXS Network</h3>
+        <a href="https://otxs.de">OTXS Main Website</a>
+        <a href="https://home.otxs.de">OTXS Home</a>
+        <a href="https://openedlabs.eduspace.work">openEd Labs</a>
+        <a href="mailto:openedlabs@gmail.com">Contact Us</a>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+      <span>© <span id="year"></span> OTXS Education. All rights reserved.</span>
+      <span>Powered by OTX Services</span>
+    </div>
+
+  </div>
+</footer>
+
+<!-- COURSE DETAILS MODAL -->
+
+<div class="modal" id="courseModal" role="dialog"
+  aria-modal="true" aria-labelledby="modalTitle">
+
+  <div class="modal-content">
+
+    <button class="modal-close" onclick="closeModal()"
+      aria-label="Close dialog">&times;</button>
+
+    <div class="eyebrow">Programme information</div>
+
+    <h2 id="modalTitle">Course Details</h2>
+
+    <p id="modalDescription"></p>
+
+    <div class="modal-details" id="modalDetails"></div>
+
+    <button class="btn" id="modalEnquire">
+      Enquire About This Course
+    </button>
+
+  </div>
+
+</div>
+
+<script>
+/* --------------------------------
+   OTXS EDUCATION - FRONTEND SCRIPT
+---------------------------------- */
+
+const WHATSAPP_NUMBER = "919625188625";
+
+const courseData = {
+  "Python Programming": {
+    description:
+      "Develop programming fundamentals, understand data structures, practise scripting and build Python applications.",
+    details:
+      "Topics: Python fundamentals, variables, conditions, loops, functions, collections, file handling and practical projects."
+  },
+
+  "Applied Generative AI": {
+    description:
+      "Understand Generative AI and explore how large language models and AI APIs can be used to build practical applications.",
+    details:
+      "Topics: LLMs, tokens, prompt engineering, model APIs, AI tools, automation and application development."
+  },
+
+  "Python for Data Analytics": {
+    description:
+      "Learn how to work with data, analyse datasets and communicate findings through visualisation and reporting.",
+    details:
+      "Topics: Python, data processing, analysis, visualisation and practical research."
+  },
+
+  "Software Testing and QA": {
+    description:
+      "Develop software quality skills through structured testing concepts and practical test execution.",
+    details:
+      "Topics: Test planning, test cases, manual testing, API testing, defect reporting and automation concepts."
+  },
+
+  "Linux and Automation": {
+    description:
+      "Build practical knowledge of Linux environments and automate repetitive technical tasks.",
+    details:
+      "Topics: Linux commands, shell scripting, permissions, process management and automation."
+  },
+
+  "Web Development Fundamentals": {
+    description:
+      "Learn the foundations of responsive web development and build your own web pages.",
+    details:
+      "Topics: HTML, CSS, JavaScript, responsive layouts and frontend projects."
+  }
+};
+
+/* MOBILE NAVIGATION */
+
+const menuToggle = document.getElementById("menuToggle");
+const navLinks = document.getElementById("navLinks");
+
+menuToggle.addEventListener("click", () => {
+  const open = navLinks.classList.toggle("active");
+  menuToggle.setAttribute("aria-expanded", String(open));
+});
+
+navLinks.querySelectorAll("a").forEach(link => {
+  link.addEventListener("click", () => {
+    navLinks.classList.remove("active");
+    menuToggle.setAttribute("aria-expanded", "false");
+  });
+});
+
+/* COURSE SEARCH AND FILTER */
+
+const searchInput = document.getElementById("courseSearch");
+const categoryFilter = document.getElementById("categoryFilter");
+const courseCards = document.querySelectorAll(".course-card");
+const emptyState = document.getElementById("emptyState");
+
+function filterCourses() {
+
+  const search = searchInput.value.toLowerCase().trim();
+  const category = categoryFilter.value;
+
+  let visible = 0;
+
+  courseCards.forEach(card => {
+
+    const cardCategory = card.dataset.category;
+    const searchable = card.dataset.search + " " +
+      card.innerText.toLowerCase();
+
+    const matchesSearch = searchable.includes(search);
+    const matchesCategory =
+      category === "all" || category === cardCategory;
+
+    const show = matchesSearch && matchesCategory;
+
+    card.style.display = show ? "flex" : "none";
+
+    if (show) visible++;
+  });
+
+  emptyState.style.display = visible ? "none" : "block";
+}
+
+searchInput.addEventListener("input", filterCourses);
+categoryFilter.addEventListener("change", filterCourses);
+
+/* COURSE MODAL */
+
+const modal = document.getElementById("courseModal");
+let selectedCourse = "";
+
+function showCourse(name) {
+
+  const course = courseData[name];
+
+  if (!course) return;
+
+  selectedCourse = name;
+
+  document.getElementById("modalTitle").textContent = name;
+  document.getElementById("modalDescription").textContent =
+    course.description;
+
+  document.getElementById("modalDetails").textContent =
+    course.details;
+
+  modal.classList.add("active");
+  document.body.style.overflow = "hidden";
+
+  document.getElementById("modalEnquire").focus();
+}
+
+function closeModal() {
+  modal.classList.remove("active");
+  document.body.style.overflow = "";
+}
+
+modal.addEventListener("click", event => {
+  if (event.target === modal) closeModal();
+});
+
+document.addEventListener("keydown", event => {
+  if (event.key === "Escape") closeModal();
+});
+
+document.getElementById("modalEnquire").addEventListener("click", () => {
+  const course = selectedCourse;
+  closeModal();
+  document.getElementById("interest").value = course;
+  document.getElementById("contact").scrollIntoView({
+    behavior: "smooth"
+  });
+});
+
+/* COURSE ENQUIRY */
+
+function enrolCourse(name) {
+
+  document.getElementById("interest").value = name;
+
+  document.getElementById("contact").scrollIntoView({
+    behavior: "smooth"
+  });
+
+  document.getElementById("fullName").focus({
+    preventScroll: true
+  });
+}
+
+/* WHATSAPP ENQUIRY FORM */
+
+const enquiryForm = document.getElementById("enquiryForm");
+const formStatus = document.getElementById("formStatus");
+
+enquiryForm.addEventListener("submit", event => {
+
+  event.preventDefault();
+
+  const name = document.getElementById("fullName").value.trim();
+  const email = document.getElementById("email").value.trim();
+  const phone = document.getElementById("phone").value.trim();
+  const interest = document.getElementById("interest").value;
+  const message = document.getElementById("message").value.trim();
+
+  if (!name || !email || !interest) {
+    formStatus.textContent = "Please complete all required fields.";
+    return;
+  }
+
+  const lines = [
+    "Hello OTXS Education!",
+    "",
+    "I would like to enquire about your education and training programmes.",
+    "",
+    "Name: " + name,
+    "Email: " + email,
+    "Contact: " + (phone || "Not provided"),
+    "Area of interest: " + interest,
+    "Requirements: " + (message || "Not specified"),
+    "",
+    "Please share the programme details, fees and next steps."
+  ];
+
+  const whatsappURL =
+    "https://wa.me/" + WHATSAPP_NUMBER +
+    "?text=" + encodeURIComponent(lines.join("\n"));
+
+  const newWindow = window.open(whatsappURL, "_blank");
+
+  if (newWindow) {
+    formStatus.textContent =
+      "WhatsApp opened. Please review and send your enquiry.";
+  } else {
+    formStatus.textContent =
+      "Your browser blocked the WhatsApp window. Please allow pop-ups and try again.";
+  }
+
+});
+
+/* FAQ ACCORDION */
+
+document.querySelectorAll(".faq-question").forEach(button => {
+
+  button.addEventListener("click", () => {
+
+    const item = button.closest(".faq-item");
+    const isOpen = item.classList.contains("active");
+
+    document.querySelectorAll(".faq-item").forEach(other => {
+      other.classList.remove("active");
+      other.querySelector(".faq-icon").textContent = "+";
+    });
+
+    if (!isOpen) {
+      item.classList.add("active");
+      item.querySelector(".faq-icon").textContent = "−";
+    }
+
+  });
+
+});
+
+/* DYNAMIC YEAR */
+
+document.getElementById("year").textContent =
+  new Date().getFullYear();
+
+</script>
+
+</body>
+</html>
+
